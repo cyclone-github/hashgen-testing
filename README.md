@@ -1,7 +1,5 @@
 # hashgen - testing
-```
-This repository is for testing features and/or programming languages for hashgen. Please note that it is intended solely for testing purposes and should not be utilized for any other use case.
-```
+**This repository is for testing features and/or programming languages for hashgen. Please note that it is intended solely for testing purposes and should not be utilized for any other use case.**
 - benchmarks
   - benchmarks of hashgen vs various hash generators
 - hashgen_c
