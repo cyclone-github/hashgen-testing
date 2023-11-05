@@ -84,11 +84,11 @@
 | argon2id | 12.2 |
 
 ### Links:
-- hashgen (go) https://github.com/cyclone-github/hashgen-testing/hashgen_go
-- hashgen (php) https://github.com/cyclone-github/hashgen-testing/hashgen_php
-- hashgen (rust) https://github.com/cyclone-github/hashgen-testing/hashgen_rust
-- hashgen (c) https://github.com/cyclone-github/hashgen-testing/hashgen_c
-- hashgen (python) https://github.com/cyclone-github/hashgen-testing/hashgen_python
+- hashgen (go) https://github.com/cyclone-github/hashgen-testing/tree/main/hashgen_go
+- hashgen (php) https://github.com/cyclone-github/hashgen-testing/tree/main/hashgen_php
+- hashgen (rust) https://github.com/cyclone-github/hashgen-testing/tree/main/hashgen_rust
+- hashgen (c) https://github.com/cyclone-github/hashgen-testing/tree/main/hashgen_c
+- hashgen (python) https://github.com/cyclone-github/hashgen-testing/tree/main/hashgen_python
 - mdxfind https://github.com/cyclone-github/mdxfind
 - hashcat test.pl https://github.com/hashcat/hashcat/blob/master/tools/test.pl
 - ULM v1E139 https://github.com/cyclone-github/hashgen-testing/benchmarks/ulm_results.txt

@@ -23,4 +23,4 @@ To use hashgen, type your mode, wordlist input & hash output files with a simple
 - https://github.com/cyclone-github/scripts/blob/main/intro_to_go.txt
 
 ### version history
--  https://github.com/cyclone-github/hashgen-testing/hashgen_go/CHANGELOG.md
+-  https://github.com/cyclone-github/hashgen-testing/blob/main/hashgen_go/CHANGELOG.md

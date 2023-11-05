@@ -1,7 +1,7 @@
 ### hashgen (php)
 - this is a simplified version of hashgen written in php
 - hashgen (php) has been surprisingly fast and has always remained a top performer during benchmarks 
-  - https://github.com/cyclone-github/hashgen-testing/benchmarks
+  - https://github.com/cyclone-github/hashgen-testing/tree/main/benchmarks
 - hashgen (go) will remain my primary implementation of hashgen and I do not expect hashgen (php) to be maintained
 
 ### usage example:
