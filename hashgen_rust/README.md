@@ -9,6 +9,7 @@
 
 ### version history
 - v2023-10-30.1615; initial github release
+- v2024-05-01.1100; add support for non-UTF8 char, read input as bytes, add support for hashcat modes (-m)
 
 ### compile from source:
 - cargo build --release

@@ -30,15 +30,15 @@
 
 ### Hash generator benchmarks
  - Head to head comparison of different hash generators
- - All testing was performed hashing rockyou.txt (15,053,568 lines) to md5
+ - All testing was performed hashing rockyou.txt (14,344,391 lines) to md5
  - Hashing was written to /dev/null where applicable, or to an ssd zpool (this was to keep write speed from being a bottleneck)
 
 ### Results:
 | Program  | Time/s | h/s |
 | ------------- | ------------- | ------------- |
 | hashgen (go)  | 0.498s | 30,228,048 |
+| hashgen (rust)    | 3.030s | 4,734,122 |
 | hashgen (php) | 3.877s | 3,876,788 |
-| hashgen (rust)    | 3.924s | 3,836,281 |
 | hashgen (c)   | 4.120s | 3,652,047 |
 | hashgen (python)  | 8.611s | 1,748,178 |
 | mdxfind	| 13.0463s | 1,153,857 |

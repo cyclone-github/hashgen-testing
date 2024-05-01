@@ -13,13 +13,14 @@ hashgen(Go) will remain my primary implementation of hashgen and I do not expect
 
 version history
 v2023-10-30.1615; initial github release
+v2024-05-01.1100; add support for non-UTF8 char, read input as bytes, add support for hashcat modes (-m)
 
 todo -- probably won't happen any time soon as my focus is on hashgen(Go)
 optimize code & hashing functions
 */
 
-const PROGRAM_VERSION: &str = "v2023.10.30";
-const READ_BUFFER_SIZE: usize = 10 * 1024 * 1024; // 10 MB
+const PROGRAM_VERSION: &str = "v2024.05.01";
+const READ_BUFFER_SIZE: usize = 20 * 1024 * 1024; // 20 MB
 const WRITE_BUFFER_SIZE: usize = 10 * 1024 * 1024; // 10 MB
 
 fn print_usage() {
@@ -85,31 +86,38 @@ fn main() -> io::Result<()> {
 
     // supported hash algo's
     let hash_mode = match hash_mode_str.as_str() {
-        "md5" => Algorithm::MD5,
-        "sha1" => Algorithm::SHA1,
-        "sha256" => Algorithm::SHA256,
-        "sha512" => Algorithm::SHA512,
+        "md5" | "0" => Algorithm::MD5,
+        "sha1" | "100" => Algorithm::SHA1,
+        "sha256" | "1400" => Algorithm::SHA256,
+        "sha512" | "1700" => Algorithm::SHA512,
         _ => {
-            println!("Error: Unsupported hash mode. Supported modes are: md5, sha1, sha256, sha512");
+            println!("Error: Unsupported hash mode. Supported modes are: md5/0, sha1/100, sha256/1400, sha512/1700");
             return Ok(());
         }
-    };
+    };    
 
     let input_handle = File::open(wordlist_file)?;
     let mut reader = BufReader::with_capacity(READ_BUFFER_SIZE, input_handle);
 
     let mut lines = Vec::new();
-    let mut line = String::new();
+    let mut line = Vec::new();
 
-    while reader.read_line(&mut line)? > 0 {
-        lines.push(line.trim_end().to_string());
+    while reader.read_until(b'\n', &mut line)? > 0 {
+        if !line.is_empty() && line[line.len() - 1] == b'\n' {
+            line.pop();
+            if !line.is_empty() && line[line.len() - 1] == b'\r' {
+                line.pop();
+            }
+        }
+        lines.push(line.clone());
         line.clear();
     }
+    
 
     let start_time = std::time::Instant::now();
 
     let hashes: Vec<String> = lines.par_iter()
-                                   .map(|line| hex_digest(hash_mode, line.as_bytes()))
+                                   .map(|line| hex_digest(hash_mode, line))
                                    .collect();
 
     let elapsed_time = start_time.elapsed().as_secs_f64();
