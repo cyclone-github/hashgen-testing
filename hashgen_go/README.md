@@ -1,11 +1,11 @@
 ### hashgen (go)
 ```
 $ ./hashgen_amd64.bin -m 0 -w rockyou.txt -o /dev/null
-2023/11/02 19:10:51 Starting...
-2023/11/02 19:10:51 Processing file: rockyou.txt
-2023/11/02 19:10:51 Hash function: 0
-2023/11/02 19:10:51 CPU Threads: 16
-2023/11/02 19:10:52 Finished hashing 15053568 lines in 0.500 sec (30.123 M lines/sec)
+2024/12/10 19:07:31 Starting...
+2024/12/10 19:07:31 Processing file: rockyou.txt
+2024/12/10 19:07:31 Hash function: 0
+2024/12/10 19:07:31 CPU Threads: 16
+2024/12/10 19:07:31 Finished processing 14344391 lines in 0.475 sec (30.228 M lines/sec)
 ```
 This repository is for hashgen-testing. The latest release version of hashgen can be found here:
 - https://github.com/cyclone-github/hashgen
