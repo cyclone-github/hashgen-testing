@@ -1,15 +1,17 @@
-### hashgen (rust)
-- this is a complete (simplified) rewrite of hashgen in Rust
-- this was a fun challenge as I have not previously developed in Rust
-- if you have a faster implimentation of hashgen in Rust, please contact me and I'll be glad to post your code!
-- hashgen (go) will remain my primary implementation of hashgen and I do not expect hashgen (rust) to be maintained
+### hashgen (Rust)
+- this is an experimental POC rewrite of hashgen (Go) v1.2.0-dev in Rust -- not recommended for production
+- hashgen (Go) will remain my primary implementation of hashgen and I do not expect hashgen (Rust) to be maintained
 
 ### usage example:
-- ./hashgen.bin -m md5 -w wordlist.txt -o output.txt
+- ./hashgen -m md5 -w wordlist.txt -o output.txt
 
 ### version history
-- v2023-10-30.1615; initial github release
-- v2024-05-01.1100; add support for non-UTF8 char, read input as bytes, add support for hashcat modes (-m)
+- v2023-10-30.1615
+  - initial github release
+- v2024-05-01.1100
+  - add support for non-UTF8 char, read input as bytes, add support for hashcat modes (-m)
+- v1.2.0-rust; 2025-09-23
+  - complete rewrite of hashgen (Go) v1.2.0-dev in Rust
 
 ### compile from source:
 - cargo build --release
