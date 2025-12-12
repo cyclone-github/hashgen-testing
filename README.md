@@ -1,4 +1,4 @@
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cyclone-github&repo=hashgen-testing&theme=gruvbox)](https://github.com/cyclone-github/hashgen-testing/)
+[![Readme Card](https://github-readme-stats-fast.vercel.app/api/pin/?username=cyclone-github&repo=hashgen-testing&theme=gruvbox)](https://github.com/cyclone-github/hashgen-testing/)
 
 [![GitHub issues](https://img.shields.io/github/issues/cyclone-github/hashgen-testing.svg)](https://github.com/cyclone-github/hashgen-testing/issues)
 [![License](https://img.shields.io/github/license/cyclone-github/hashgen-testing.svg)](LICENSE)
